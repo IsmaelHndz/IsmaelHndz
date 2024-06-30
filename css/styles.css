@@ -215,7 +215,7 @@ form button:hover {
 
 @media (max-width: 1024px) {
     .main-image-section {
-        background-position: center center;
+        background-position: center top;
         background-size: cover;
         height: auto;
         padding-top: 70px; /* Compensa la barra de navegación */
@@ -232,7 +232,7 @@ form button:hover {
 
 @media (max-width: 768px) {
     .main-image-section {
-        background-position: center center;
+        background-position: center top;
         background-size: cover;
         height: auto;
         padding-top: 70px; /* Compensa la barra de navegación */
@@ -249,7 +249,7 @@ form button:hover {
 
 @media (max-width: 480px) {
     .main-image-section {
-        background-position: center center;
+        background-position: center top;
         background-size: cover;
         height: auto;
         padding-top: 70px; /* Compensa la barra de navegación */
