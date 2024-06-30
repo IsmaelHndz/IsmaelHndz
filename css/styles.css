@@ -218,7 +218,7 @@ form button:hover {
         background-position: center top;
         background-size: contain;
         height: auto;
-        padding-top: 70px; /* Compensa la barra de navegación */
+        padding-top: 700px; /* Compensa la barra de navegación */
     }
 
     .main-title {
@@ -235,7 +235,7 @@ form button:hover {
         background-position: center top;
         background-size: contain;
         height: auto;
-        padding-top: 70px; /* Compensa la barra de navegación */
+        padding-top: 650px; /* Compensa la barra de navegación */
     }
 
     .main-title {
@@ -252,7 +252,7 @@ form button:hover {
         background-position: center top;
         background-size: contain;
         height: auto;
-        padding-top: 70px; /* Compensa la barra de navegación */
+        padding-top: 600px; /* Compensa la barra de navegación */
     }
 
     .main-title {
