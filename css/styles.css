@@ -214,7 +214,7 @@ form button:hover {
     font-size: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: auto) {
     .main-image-section {
         background-position: center left 30%;
         background-size: cover;
