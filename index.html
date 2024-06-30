@@ -1,233 +1,160 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    background-color: black;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iván López Reynoso</title>
+    <link rel="shortcut icon" href="/img/icon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#biography">Biografía</a></li>
+                <li><a href="#events">Eventos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
 
-/* Navegación */
-nav {
-    background-color: #000;
-}
-
-nav .brand-logo {
-    padding-left: 20px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #DAA520;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-}
-
-nav .right li a {
-    font-size: 1.8rem;
-    color: white;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-nav .right li a:hover {
-    color: #DAA520;
-    filter: contrast(120%);
-    transform: scale(1.2);
-}
-
-/* Contenedores */
-.container {
-    margin-top: 60px;
-}
-
-.subtitle {
-    color: white;
-}
-
-/* Estilos de la biografía */
-#biografia h2 {
-    margin-top: 0;
-    font-size: 2.5rem;
-}
-.bio-container {
-    background-color: black;
-    color: white;
-    border: 4px solid #DAA520;
-    border-radius: 20px;
-    padding: 30px;
-    margin: auto 20px ;
-    margin-bottom: 30px;
-}
-
-/* Estilos de los eventos */
-#eventos h2 {
-    color: white;
-    font-size: 2.5rem;
-}
-
-.event-container {
-    background-color: white;
-    border: 2px solid #DAA520;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.event-container:hover {
-    transform: scale(1.02);
-    background-color: #000;
-    h5{
-        color: #DAA520;
-    }
-    color:white;
-}
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#biography">Biografía</a></li>
+        <li><a href="#events">Eventos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+    </ul>
 
 
-/* Formulario de contacto */
-#contacto h2 {
-    font-size: 2.5rem;
-}
+    <!-- Imagen Principal -->
+    <section id="main-image" class="main-image-section">
+        <div class="overlay">
+            <h1 class="main-title">Iván López Reynoso</h1>
+            <p class="main-subtitle">Director de Orquesta</p>
+        </div>
+    </section>
 
-form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-form fieldset {
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-
-form label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-form input, form select, form button {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-form button {
-    background-color: #000;
-    color: #DAA520;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-form button:hover {
-    background-color: #DAA520;
-    color: #000;
-}
-
-
-#test-carrusel {
-    display: flex;
-    width: auto ;
-    height: 430px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #test-carrusel img{
-    width: 0px;
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: .8;
-    transition: .5s ease;
-  }
-  #test-carrusel img:hover{
-    cursor: crosshair;
-    width: 300px;
-    opacity: 1;
-    filter: contrast(120%);
-  }
-
-/* Footer */
-.page-footer {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px; /* Espacio entre los iconos */
-    list-style:circle;
-    padding-left: 0;
-}
-
-.social-icons li {
-    display: inline-block;
-}
-
-.social-icons i {
-    color: #ffffff;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-
-.social-icons i:hover{
-    color: #DAA520;
-    transform: scale(1.5);
-}
-
-.main-image-section {
-    position: relative;
-    height: 100vh; /* Altura de la ventana completa */
-    background-image: url('../img/main_picture.jpg'); /* Ruta de tu imagen */
-    background-size: cover;
-    background-position: top center;
-    background-attachment: fixed; /* Efecto parallax */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-}
-
-.main-image-section .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen para resaltar el texto */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.main-title {
-    font-size: 4rem;
-    margin-top:22% ;
-    filter: contrast(120%);
-}
-
-.main-subtitle {
-    font-size: 1.5rem;
-}
-
-@media (max-width: 768px) {
-    .main-image-section {
-        background-position: center left 30%;
-        height: auto;
-        padding-top: 650px; /* Compensa la barra de navegación */
-    }
     
-    .main-title {
-        font-size: 2.5rem;
-        margin-top: 90%;
-        filter: contrast(120%);
-    }
+    <!-- Sección de Biografía -->
+    <section id="biography" class="section">
+        <div class="bio-container">
+            <h2 class="white-text">Biografía</h2>
+            <p>Nació en Guanajuato en 1990. Realizó estudios de violín, piano, canto y dirección de orquesta, titulado con mención honorífica de la Escuela de Música Vida y Movimiento. Además, ha tomado clases magistrales con los directores Alberto Zedda, Jean Paul Penin y Avi Ostrowsky.</p>
+            <p>Ha dirigido a la Philharmonia Zürich, la Orquesta Sinfónica de Madrid, la Orquesta Estatal de Braunschweig, la Milwaukee Symphony Orchestra, la Real Orquesta Sinfónica de Sevilla, la Orquesta Sinfónica de Navarra, la Orquesta Sinfónica de Tenerife, la Orquesta de la Comunidad de Madrid, la Oviedo Filarmonía, la Orquesta Filarmónica de la UNAM, la Orquesta Sinfónica del Estado de México, la Orquesta Filarmónica de la Ciudad de México, la Orquesta Filarmónica de Jalisco, la Orquesta Sinfónica Nacional, la Orquesta Sinfónica de Xalapa, la Orquesta Sinfónica de Minería, Coro y Orquesta del Teatro de Bellas Artes, entre otras. Ha trabajado con destacados artistas como Bryn Terfel, Brigitte Fassbaender, Ildar Abdrazakov, Javier Camarena, Ramón Vargas, Alessandro Corbelli, Irina Lungu, John Osborn, Franz Hawlata, Paolo Bordogna, Ute Lemper, Augustin Hadelich, Michael Barenboim, Yulianna Avdeeva, Gabriela Montero, Jorge Federico Osorio y Conrad Tao, entre otros.</p>
+            <details>
+                <summary>Seguir leyendo</summary>
+                <p>La versatilidad de Iván López Reynoso, considerado como la batuta mexicana más importante de su generación, lo ha llevado a dirigir distintas disciplinas y estilos como ópera, ballet, danza contemporánea, música antigua y música contemporánea. Su extenso repertorio operístico incluye más de cincuenta títulos, entre los cuales destacan Aida, El holandés errante, Carmen, La bohème, Fidelio, Las bodas de Fígaro, Così fan tutte, La flauta mágica, Don Giovanni, El pirata, El barbero de Sevilla, La cenicienta, El turco en Italia, I Puritani, Werther, Don Carlo, Tosca, Hansel y Gretel, El elíxir de amor, Madama Butterfly, La Traviata y Rigoletto, así como el estreno en México de Viva la mamma de Donizetti, Le comte Ory, e Il viaggio a Reims de Rossini.</p>
+                <p>En agosto de 2014 realizó su debut internacional en el prestigiado Rossini Opera Festival en la ciudad de Pesaro, Italia, concertando la ópera El viaje a Reims de Rossini, convirtiéndose en el primer mexicano en dirigir en dicho festival. Ha dirigido en los máximos recintos culturales de México y se ha presentado con éxito en escenarios de Estados Unidos, Omán, Suiza, España, Italia, Alemania y Perú, como la Opernhaus Zürich, la Santa Fe Opera, el Teatro Real de Madrid, el Teatro de la Maestranza de Sevilla, la Royal Opera House Muscat, entre otros. En marzo de 2018, es condecorado por el Congreso del Estado de Guanajuato con el Premio Estatal de Artes Diego Rivera en reconocimiento a su trayectoria artística. Se ha desempeñado como Director artístico interino de la Orquesta Sinfónica de Aguascalientes, como Director asociado de la Orquesta Filarmónica de la UNAM y como Erster Kapellmeister del Teatro Estatal de Braunschweig.</p>
+                <p>Iván López Reynoso es también un destacado contratenor con numerosas y exitosas presentaciones como solista en México, Estados Unidos y Alemania. En diciembre de 2020 fue nombrado Director artístico de la Orquesta del Teatro de Bellas Artes y desde 2018 funge como Principal director invitado de la Oviedo Filarmonía.</p>
+            </details>
+            
+        </div>
+    </section>
+
+    <!-- Sección de Eventos -->
+    <section id="events" class="section">
+        <div class="container">
+            <h2 class="white-text">Próximos Eventos</h2>
+            <div class="event-container">
+                <h5>Evento 1: Concierto en la Filarmónica de Nueva York</h5>
+                <p>Fecha: 15 de Julio de 2024</p>
+                <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet mi finibus.</p>
+            </div>
+            <div class="event-container">
+                <h5>Evento 2: Concierto en la Ópera de París</h5>
+                <p>Fecha: 22 de Agosto de 2024</p>
+                <p>Descripción: Vivamus tempor, justo sit amet cursus pulvinar, leo ligula interdum elit.</p>
+            </div>
+            <div class="event-container">
+                <h5>Evento 3: Concierto en el Teatro Colón, Buenos Aires</h5>
+                <p>Fecha: 30 de Septiembre de 2024</p>
+                <p>Descripción: Quisque a eros in libero gravida malesuada vel at eros. Integer at eros neque.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="test-carrusel">
+        <img src="img/image.jpg">
+        <img src="img/ivan1.jpg">
+        <img src="img/ivan2.jpg">
+        <img src="img/ivan3.jpg">
+        <img src="img/image.jpg">
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contact" class="section">
+        <div class="container contact-form">
+            <h2 class="white-text">Contacto</h2>
+            <form method="post" action="/">
+                <fieldset>
+                    <legend>Información de contacto</legend>
+                    <label>Correo:
+                        <input type="email" name="email" placeholder="tu_correo@example.com">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <div>
+                        <legend>Número</legend>
+                        <label>Teléfono:
+                            <input type="tel" name="phone" placeholder="+52 ">
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <label>Ingresa una opción:</label>
+                    <select>
+                        <option value="1">Trabajo</option>
+                        <option value="2">Dudas</option>
+                        <option value="3">Más información</option>
+                    </select>
+                </fieldset>
+                
+                <button type="submit">Enviar Formulario</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer black">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Director de Orquesta</h5>
+                    <p class="grey-text text-lighten-4">Síguenos en nuestras redes sociales para más actualizaciones.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Redes Sociales</h5>
+                    <ul class="social-icons">
+                        <li><a class="grey-text text-lighten-3" href="https://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/ivanlopez_reynoso?igsh=M3ZibGZhOTY3OGNk" target="_blank"><i class="fab fa-instagram fa-2x"></i></a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://www.youtube.com/@ivanlopezreynoso9771" target="_blank"><i class="fab fa-youtube fa-2x"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2024 Iván López Reynoso
+            </div>
+        </div>
+    </footer>
+
     
-    .main-subtitle {
-        font-size: 1rem;
-    }
-}
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+    </script>
+
+</body>
+</html>
