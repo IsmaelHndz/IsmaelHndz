@@ -28,6 +28,7 @@ nav .right li a {
 
 nav .right li a:hover {
     color: #DAA520;
+    filter: contrast(120%);
     transform: scale(1.2);
 }
 
@@ -176,13 +177,12 @@ form button:hover {
     transform: scale(1.5);
 }
 
-/* Estilos para la sección de imagen principal */
 .main-image-section {
     position: relative;
     height: 100vh; /* Altura de la ventana completa */
-    background-image:url('../img/main_picture.jpg'); /* Ruta de tu imagen */
+    background-image: url('../img/main_picture.jpg'); /* Ruta de tu imagen */
     background-size: cover;
-    background-position: top center 20px;
+    background-position: top center;
     background-attachment: fixed; /* Efecto parallax */
     display: flex;
     align-items: center;
@@ -206,7 +206,8 @@ form button:hover {
 
 .main-title {
     font-size: 4rem;
-    margin: 0;
+    margin-top:22% ;
+    filter: contrast(120%);
 }
 
 .main-subtitle {
@@ -214,9 +215,18 @@ form button:hover {
 }
 
 @media (max-width: 768px) {
+    .main-image-section {
+        background-position: center left 30%;
+        height: auto;
+        padding-top: 650px; /* Compensa la barra de navegación */
+    }
+    
     .main-title {
         font-size: 2.5rem;
+        margin-top: 90%;
+        filter: contrast(120%);
     }
+    
     .main-subtitle {
         font-size: 1rem;
     }
