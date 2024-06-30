@@ -29,8 +29,6 @@ nav .right li a {
 nav .right li a:hover {
     color: #DAA520;
     transform: scale(1.2);
-    background-color: #333;
-    border-radius: 15px;
 }
 
 /* Contenedores */
@@ -53,9 +51,8 @@ nav .right li a:hover {
     border: 4px solid #DAA520;
     border-radius: 20px;
     padding: 30px;
-    margin: 70px ;
+    margin: auto 20px ;
     margin-bottom: 30px;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Estilos de los eventos */
@@ -177,4 +174,50 @@ form button:hover {
 .social-icons i:hover{
     color: #DAA520;
     transform: scale(1.5);
+}
+
+/* Estilos para la sección de imagen principal */
+.main-image-section {
+    position: relative;
+    height: 100vh; /* Altura de la ventana completa */
+    background-image:url('../img/main_picture.jpg'); /* Ruta de tu imagen */
+    background-size: cover;
+    background-position: top center 20px;
+    background-attachment: fixed; /* Efecto parallax */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.main-image-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen para resaltar el texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-title {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.main-subtitle {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    .main-subtitle {
+        font-size: 1rem;
+    }
 }
