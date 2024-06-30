@@ -182,7 +182,7 @@ form button:hover {
     height: 100vh; /* Altura de la ventana completa */
     background-image: url('../img/main_picture.jpg'); /* Ruta de tu imagen */
     background-size: cover;
-    background-position: top center;
+    background-position: center top;
     background-attachment: fixed; /* Efecto parallax */
     display: flex;
     align-items: center;
@@ -206,29 +206,61 @@ form button:hover {
 
 .main-title {
     font-size: 4rem;
-    margin-top:22% ;
-    filter: contrast(120%);
+    margin: 0;
 }
 
 .main-subtitle {
     font-size: 1.5rem;
 }
 
-@media (max-width: auto) {
+@media (max-width: 1024px) {
     .main-image-section {
-        background-position: center left 30%;
+        background-position: center center;
         background-size: cover;
         height: auto;
-        padding-top: 75vh; /* Compensa la barra de navegación */
+        padding-top: 70px; /* Compensa la barra de navegación */
     }
-    
+
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .main-subtitle {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-image-section {
+        background-position: center center;
+        background-size: cover;
+        height: auto;
+        padding-top: 70px; /* Compensa la barra de navegación */
+    }
+
     .main-title {
         font-size: 2.5rem;
-        margin-top: 90%;
-        filter: contrast(120%);
     }
-    
+
     .main-subtitle {
         font-size: 1rem;
     }
 }
+
+@media (max-width: 480px) {
+    .main-image-section {
+        background-position: center center;
+        background-size: cover;
+        height: auto;
+        padding-top: 70px; /* Compensa la barra de navegación */
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .main-subtitle {
+        font-size: 0.875rem;
+    }
+}
+
